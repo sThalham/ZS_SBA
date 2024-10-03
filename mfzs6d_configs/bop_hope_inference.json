@@ -1,0 +1,15 @@
+{
+  "dataset" : "hope",
+  "dataset_path" : "/home/stefan/datasets/hope_base",
+  "template_savepath" : "/home/stefan/datasets/hope_base/templates/obj_1_dino_zs6d",
+  "segmentation_path" : "/home/stefan/datasets/hope_base/CNOS_seg/cnos-sam_hope-test_static-020a-45bd-8ec5-c95560b68011.json",
+  "results_path" : "/home/stefan/datasets/hope_base/results",
+  "object_model_path" : "/home/stefan/datasets/hope_base/hope/models/models_eval",
+  "extractor" : "dino",
+  "obj_ids" : [1],
+  "type" : "test",
+  "crop_ratios" : [1.5],
+  "number_keypoints" : 10,
+  "template_size" : 224,
+  "n_hypotheses" : 3
+}

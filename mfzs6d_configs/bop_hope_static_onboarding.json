@@ -1,0 +1,13 @@
+{
+  "dataset" : "hope",
+  "dataset_path" : "/home/stefan/datasets/hope_base",
+  "template_savepath" : "/home/stefan/datasets/hope_base/templates",
+  "extractor" : "dino",
+  "obj_ids" : [1],
+  "type" : "onboarding_static",
+  "number_templates" : "100",
+  "template_size" : 224,
+  "crop_ratios" : [1.5],
+  "number_keypoints" : 100,
+  "n_hypotheses" : 1
+}
