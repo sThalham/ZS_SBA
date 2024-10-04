@@ -326,8 +326,8 @@ if __name__ == '__main__':
                 ##############################
                 # mesh visualization
                 #############################
-                R_c_q = R_obj
-                t_c_q = t_obj
+                R_c_q = R_est
+                t_c_q = t_est
                 #colEst = (np.random.randint(25, 240), np.random.randint(25, 240), np.random.randint(25, 240))
                 colEst = (255, 223, 0)
                 model_vsd = object_models[prior_cls]
@@ -362,15 +362,12 @@ if __name__ == '__main__':
                 template_corners[i_hyp, 3] = ((t_height - tmp_K[3]) * z_tmp) / tmp_K[1]
 
             # Doing semantic bundle adjustment here
-
-            print("len pose hyps: ", len(pose_params_ba))
-            print("pose hyps: ", pose_params_ba)
             #
             trans_refine = featuremetric_bundle_adjustment(template_hyps, template_masks, templates_corners, query_desc, query_K, initial_pose)
 
             t0 = time.time()
-            res = least_squares(mfzs6d_utils.compute_residuals, ba_input, verbose=2, ftol=1e-4, method='lm',
-                                args=(points2d_ba, points3d_ba, query_K, image_viz))
+            #res = least_squares(mfzs6d_utils.compute_residuals, ba_input, verbose=2, ftol=1e-4, method='lm',
+            #                    args=(points2d_ba, points3d_ba, query_K, image_viz))
             t1 = time.time()
 
             #############################

@@ -81,6 +81,8 @@ def masked_feature_map_error(params, feature_maps_candidates, feature_maps_masks
         y2 = ((template_3d[i_hyp, 3] * camera_matrix[1]) / t[2]) + camera_matrix[3]
 
         # crop + resize
+
+
         # mask
 
 
